@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">  
+        <title>ML Zoomcamp 2022 |  Mid Term Project | Loan Approval Prediction Application</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h3>
+                Loan Approval Prediction
+                <small class="text-muted" style="font-size:0.64em"> To know if you're home loan will be approved or not...</small>
+                <br>
+                <p class="py-2 fst-italic lh-base" style="font-size:0.55em">Enter the following information to find results.</p>
+            </h3>
+
+            <div class="content">
+                <form action="{{ url_for('predict')}}" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <label for="loan_id" class="attribute">Loan ID</label>
+                            <input type="text" class="form-control" name="loan_id" required="required">
+                        </div>
+                        <div class="col">
+                            <label for="applicant_income" class="attribute">Applicant Income <span class="fst-italic">(in thousands)</span></label>
+                            <input type="number" class="form-control" name="applicant_income" required>
+                        </div>
+                        <div class="col">
+                            <label for="coapplicant_income" class="attribute">Coapplicant Income <span class="fst-italic">(in thousands)</span></label>
+                            <input type="number" class="form-control" name="coapplicant_income"  required>
+                        </div>
+                        <div class="col">
+                            <label for="loan_amount" class="attribute">Loan Amount <span class="fst-italic">(in thousands)</span></label>
+                            <input type="number" class="form-control" name="loan_amount"  required>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <label for="loan_amount_term" class="attribute">Loan Amount Term <span class="fst-italic">(in months)</span></label>
+                            <input type="number" class="form-control" name="loan_amount_term" required>
+                        </div>
+                        <div class="col">
+                            <label for="gender" class="attribute">Gender</label>
+                            <div></div>
+                            <input type="radio" name="gender" value="male" required>
+                            <label for="gender" class="radio_int">Male</label>
+                            <br>
+
+                            <input type="radio" name="gender" value="female" required>
+                            <label for="gender" class="radio_int">Female</label> 
+                        </div>
+                        <div class="col">
+                            <label for="married" class="attribute">Marrtial Status</label>
+                            <div></div>
+                            <input type="radio" name="married" value="yes" required>
+                            <label for="married" class="radio_int">Married</label>
+                            <br>
+
+                            <input type="radio" name="married" value="no" required>
+                            <label for="married" class="radio_int">Single</label> 
+                        </div>
+                        <div class="col">
+                            <label for="property_area" class="attribute">Property Area Type</label>
+                            <div></div>
+                            <input type="radio" name="property_area" value="urban" required>
+                            <label for="property_area" class="radio_int">Urban</label>
+                            <br>
+                            <input type="radio" id="property_area" name="property_area" value="rural" required>
+                            <label for="property_area" class="radio_int">Rural</label>
+                            <br>
+                            <input type="radio" id="property_area" name="property_area" value="semiurban" required>
+                            <label for="property_area" class="radio_int">Semiurban</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="education" class="attribute">Education Level</label>
+                            <div></div>
+                            <input type="radio" name="education" value="graduate" required>
+                            <label for="education" class="radio_int">Graduate  <span class="fst-italic">(master's or doctorate)</span></label>
+                            <br>
+
+                            <input type="radio" id="education" name="education" value="not_graduate" required>
+                            <label for="education" class="radio_int">Undergraduate <span class="fst-italic">(bachlor's degree)</label>
+                        </div>
+                        <div class="col">
+                            <label for="self_employed" class="attribute">Employment Status</label>
+                            <div></div>
+                            <input type="radio" name="self_employed" value="yes" required>
+                            <label for="self_employed" class="radio_int">Self-employed</label>
+                            <br>
+                            <input type="radio" name="self_employed" value="no" required>
+                            <label for="self_employed" class="radio_int">Employee</label>
+                        </div>                        
+                        <div class="col">
+                            <label for="credit_history" class="attribute">Credit History</label>
+                            <div></div>
+                            <input type="radio" name="credit_history" value=1 required>
+                            <label for="credit_history" class="radio_int">Yes</label> 
+                            <br>
+                            <input type="radio" name="credit_history" value=0 required>
+                            <label for="credit_history" class="radio_int">No</label>
+                        </div>
+                        <div class="col">
+                            <label for="dependents" class="attribute">No of Dependents</label>
+                            <div></div>
+                            <input type="radio" name="dependents" value="0" required>
+                            <label for="dependents" class="radio_int">Zero</label>
+                            <br>
+
+                            <input type="radio" name="dependents" value="1" required>
+                            <label for="dependents" class="radio_int">One</label>
+                            <br>
+
+                            <input type="radio" name="dependents" value="2" required>
+                            <label for="dependents" class="radio_int">Two</label> 
+                            <br>
+
+                            <input type="radio" name="dependents" value="3+" required>
+                            <label for="dependents" class="radio_int">More than two</label>
+                        </div> 
+                    </div>
+                    <button type="submit" class="btn btn-success mxy-4">Submit</button>
+                </form>
+            </div>            
+
+            {% if "True" in status %}
+                <div class="alert alert-primary" role="alert">
+                    <h4 class="alert-heading">Congratulations!!</h4>
+                    <p>You have successfully completed the loan process. You are eligible for this <b>Home Loan</b>, and your loan can be approved with a chance of {{ probability }}%.</p>
+                </div>
+            {% elif "False" in status %}
+                <div class="alert alert-primary" role="alert">
+                    <h4 class="alert-heading">We are Sorry!!</h4>
+                    <p>You are not eligible for this <b>Home Loan</b> at this time. There are {{ probability }}% of chances that your loan will not approve.</p>
+                </div>
+            {% endif %}
+            <div class="alert alert-warning callout" role="alert">
+                <p class="mb-0">This machine learning application is a part of Mid Term project for the course <a href="https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp">ML Zoomcamp</a> conducted by Alexey Grigorev. You can take this free course at any time. Thank you so much, Alexey for this wonderful course. &#128591;&#128522;
+</p>
+<p>
+You can find documents and code related to this ML Application on the GitHub repository <a href="#">here</a></p>
+            </div>
+        </div>
+
+    </body>
+    <style>
+
+        *,
+        *::before,
+        *::after{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding:1em;
+            margin:1em;
+            background-color: #e2e8f330; 
+        }
+
+        .content{
+            max-width:1200px;
+            margin: auto;
+        }
+
+        .content label{
+            font-size:0.99em;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        label.radio_int{
+            font-weight: normal;
+        }
+
+        form{
+            margin:2em;
+        }
+
+        .row{
+            margin-top:0.2em;
+        }
+        .col .attribute{
+            margin-top:1em;
+        }
+
+        .callout{
+            border-left:0.24rem solid #ffc107;
+        }
+    </style>
+
+</html>
