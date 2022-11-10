@@ -319,4 +319,15 @@ python request.py
 
 The `cloud_deploy` folder contains all code and dependencies to deploy a model on the cloud platform Heroku using the docker container. Here, `app.py` is a prediction model web application with a front end.
 
-The following video shows the steps required to deploy the model as a web service on the cloud and its response from the web service
+The following screen shot shows the deployed the model as a web service on the cloud and its response from the web service.
+
+***Web application Homepage***
+![index](https://github.com/madhuri-15/home-loan-approval-prediction/blob/main/images/homepage.png)
+
+
+***Request***
+![index](https://github.com/madhuri-15/home-loan-approval-prediction/blob/main/images/input.png)
+
+
+***Response***
+![index](https://github.com/madhuri-15/home-loan-approval-prediction/blob/main/images/output.png)
