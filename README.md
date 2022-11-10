@@ -147,7 +147,7 @@ The following tree graph shows the folder structure of this repository.
 
 After a data preparation, Correlation data analysis and data visualization performed to find relation between feature variables and response variable. Further, to confirm the findings from visualization, `chi-square` hypothesis test perfromed on categorical variables while `ANOVA` test is performed on numerical variables.
 
-##### 3.1.1 Chi-2 hypothesis test for categorical variables
+#### 3.1.1 Chi-2 hypothesis test for categorical variables
 
 To find the relation between categorical features and response variable.
 
@@ -157,7 +157,7 @@ To find the relation between categorical features and response variable.
 
 The result shows that, status of loan approval does not depends on feature variables `gender`, `dependents`, and  `self-employed`  while it shows strong correlation with feature `credit_history` and `property_area`.
 
-##### 3.1.2 ANOVA hypothesis test for numerical variables
+#### 3.1.2 ANOVA hypothesis test for numerical variables
 
 To find if there is statistically significant difference in distribution of means of numerical features for the groups of categories of response variable.
 
