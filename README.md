@@ -24,7 +24,7 @@ The dataset is taken from the analytics vidya hackathon platform. You can downlo
 
 This dataset consist of 13 attributes and  614 records of customer details such as loan id number, gender, marital status, income of applicant and coapplicant loan amount etc.
 
-This is binary classification problem, where we will predict the `Loan_Status` which describes `Y` for applicantion that are approved by company or bank and `N` for the rejected applications.
+This is binary classification problem, where we will predict the `Loan_Status` which describes `Y` for application that are approved by company or bank and `N` for the rejected applications.
 
 The description of data attributes is as follows:
 
