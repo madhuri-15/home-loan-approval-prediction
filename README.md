@@ -30,7 +30,7 @@ The description of data attributes is as follows:
 
 | Attributes        | Description                                                        |
 | ----------------- | ------------------------------------------------------------------ |
-| Loan_ID           | unqiue loan id                                                     |
+| Loan_ID           | unique loan id                                                     |
 | Gender            | gender male/female                                                 |
 | Married           | Whether applicant is married or not (Y/N)                          |
 | Dependents        | Number of dependents on applicant                                  |
