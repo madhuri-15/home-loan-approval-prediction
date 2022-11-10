@@ -28,21 +28,22 @@ This is binary classification problem, where we will predict the `Loan_Status` w
 
 The description of data attributes is as follows:
 
-| Attributes        | Description                                                           |
-| ----------------- | --------------------------------------------------------------------- |
-| Loan_ID           | Applicant's unqiue loan id                                            |
-| Gender            | Applicant's gender male/female                                        |
-| Married           | Whether applicant is married or not (Y/N)                             |
-| Dependents        | Number of dependents on applicant                                     |
-| Education         | Education level of applicant(graduate/under graduate)                 |
-| Self_Employed     | self employed (y/n)                                                   |
-| ApplicantIncome   | Applicant income                                                      |
-| CoapplicantIncome | Coapplicant's income, who is apply with applicant as money borrowers. |
-| LoanAmount        | Loan amount in thousands                                              |
-| Loan_Amount_Term  | Amount of time the lender gives you to repay your laon.(in months)    |
-| Credit_History    | if Credit history meets guidlines 1/ 0                                |
-| Property_Area     | urban/semi urban / rural                                              |
-| Loan_Status       | loan approved(y/n)                                                    |
+| Attributes        | Description                                                        |
+| ----------------- | ------------------------------------------------------------------ |
+| Loan_ID           | unqiue loan id                                                     |
+| Gender            | gender male/female                                                 |
+| Married           | Whether applicant is married or not (Y/N)                          |
+| Dependents        | Number of dependents on applicant                                  |
+| Education         | Education level of applicant(graduate/undergraduate)               |
+| Self_Employed     | self employed (y/n)                                                |
+| ApplicantIncome   | Applicant income                                                   |
+| CoapplicantIncome | Coapplicant income                                                 |
+| LoanAmount        | Loan amount in thousands                                           |
+| Loan_Amount_Term  | Amount of time the lender gives you to repay your laon.(in months) |
+| Credit_History    | if Credit history meets guidlines 1/ 0                             |
+| Property_Area     | urban/semiurban / rural                                            |
+| Loan_Status       | loan approved(y/n)                                                 |
+
 
 ## 2. Folder Structure
 
