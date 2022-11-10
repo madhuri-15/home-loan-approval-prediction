@@ -22,7 +22,7 @@ The project objective is to build a web application using machine learning model
 
 The dataset is taken from the analytics vidya hackathon platform. You can download the data from [here](https://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/#ProblemStatement). There are three data files available to download while I have used only the `train.csv` file to train and validate a machine learning model.
 
-This dataset consist of 13 attributes and  614 records of customer details such as loan id number, gender, marrital status, income of applicant and coapplicant loan amount etc.
+This dataset consist of 13 attributes and  614 records of customer details such as loan id number, gender, marital status, income of applicant and coapplicant loan amount etc.
 
 This is binary classification problem, where we will predict the `Loan_Status` which describes `Y` for applicantion that are approved by company or bank and `N` for the rejected applications.
 
