@@ -8,10 +8,13 @@ pandas = "*"
 scikit-learn = "*"
 scipy = "*"
 flask = "*"
-waitress = "*"
 requests = "*"
+waitress = "*"
 jupyter = "*"
 notebook = "*"
+matplotlib = "*"
+seaborn = "*"
+xgboost = "*"
 
 [dev-packages]
 
