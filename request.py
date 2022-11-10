@@ -26,12 +26,8 @@ response = requests.post(url, json=customer)
 result = response.json()
 
 if result['loan_status']:
-    print("Congratulations!!")
-    print("""You successfully complete the loan process.
-          You are eligible for this Home Loan and your loan
-          can be approved with chance of %.3f %.""" result['prediction_probability'])
+    print("Prediction Probabililty:: ", result['prediction_probability'])
+    print("Loan Status:: Approved")
 else:
-    print("We are Sorry!!")
-    print("""Your are not eligible for this Home Loan at this time.
-             Since, there are %.3f % of chances that your
-             loan will not approved.""" result['prediction_probability'])
+    print("Prediction Probabililty:: ", result['prediction_probability'])
+    print("Loan Status:: Not Approved")

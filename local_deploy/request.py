@@ -26,11 +26,11 @@ response = requests.post(url, json=customer)
 result = response.json()
 
 if result['loan_status']:
-    print("Congratulations!! Your loan has been approved.")
-    print("Prediction probability:: ", result['prediction_probability'])
+    print("Prediction Probabililty:: ", result['prediction_probability'])
+    print("Loan Status:: Approved")
 
 else:
-    print("We are Sorry!! Your loan is not approved at this time.")
-    print("Prediction probability:: ", result['prediction_probability'])
+    print("Prediction Probabililty:: ", result['prediction_probability'])
+    print("Loan Status:: Not Approved")
 
 

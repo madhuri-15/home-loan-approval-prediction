@@ -130,7 +130,6 @@ y_preds = clf.predict(x_test)
 score = f1_score(y_test, y_preds, average='macro')
 print("Test F1-Score::%f" % score)
 
-  
 # Save model in pickle file
 output_file = "model.bin"
 with open(output_file, 'wb') as f_out:
