@@ -310,7 +310,7 @@ docker build -t loan_approval .
 Create a docker container from the image and run an application using following command.
 
 ```
-docker run -p 9696:9696 loan_approval:latest
+docker run -it -p 9696:9696 loan_approval:latest
 ```
 
 Again, you can test or request web service running on docker container by running python scriptAgain, you can test or request web service running on the docker container by running python script `request.py`  on another command prompt from the same directory.
