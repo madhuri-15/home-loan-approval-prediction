@@ -10,7 +10,7 @@ This repository contains code and document of the mid-term project **Home Loan A
 
 A loan is a sum of money that one or more individuals or companies borrow from banks or other financial institutions; to financially manage events. In doing so, the borrower incurs a debt, which he has to pay back with interest within a given period. 
 
-Loans can be education loans or personal loans. The most common type of loan is a **Home Loan** or **Mortgage**. A mortgage is a type of secured loan which is taken for the purchase of a property.
+Loans can be education loans or personal loans. The most common type of loan is a **Home Loan**. It is a type of secured loan which is taken for the purchase of a property.
 
  A typical process for home loans starts with an application from the customer; after that company will validate the eligibility of the customer for a loan, based on the result application can be accepted or rejected. The loan approval is the most crucial stage of a loan process and takes a long time to complete. We can automate this process of eligibility of customers for a home loan by using a Machine Learning algorithm.
 
@@ -253,7 +253,7 @@ The steps to install `pipenv` and package dependencies on the windows operating 
 2. Download the project from the GitHub repository, or you can clone this repository.
    
    ```
-   git clone enter-link-here
+   git clone https://github.com/madhuri-15/home-loan-approval-prediction.git
    ```
 
 3. Open the folder and go to the directory where Pipenv and Pipenv.lock file is present. Create a virtual environment and install all dependencies from  `Pipenv.lock` file.
@@ -286,7 +286,7 @@ Open a command prompt, activate the virtual environment, and run the following c
 waitress-serve --listen=0.0.0.0:9696 predict:app
 ```
 
-Open another command prompt in the same directory as above and run `request.py` t o test / make request to this web service. 
+Open another command prompt in the same directory as above and run `request.py` to make request to this web service. 
 
 ```
 python request.py
@@ -314,7 +314,7 @@ Create a docker container from the image and run an application using following 
 docker run -it -p 9696:9696 loan_approval:latest
 ```
 
-Again, you can test or request web service running on docker container by running python scriptAgain, you can test or request web service running on the docker container by running python script `request.py`  on another command prompt from the same directory.
+You can test or request web service running on the docker container by running python script `request.py`  on another command prompt from the same directory.
 
 ```
 python request.py
