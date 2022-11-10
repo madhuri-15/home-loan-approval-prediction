@@ -74,6 +74,7 @@ The following tree graph shows the folder structure of this repository.
 |   |-- Pipfile
 |   |-- Pipfile.lock
 |   |-- Procfile
+|--\images
 ```
 
 * **README.md**
@@ -140,6 +141,9 @@ The following tree graph shows the folder structure of this repository.
   > - `templates` directory contains `index.html` html file for home page.
   > 
   > - `Procfile` is necessary for heroku deployment which contains command for execution of an app on startup.
+
+* **Images**
+  > It contains the screenshot images of web applicantion.
 
 ## 3. Approach
 
