@@ -2,7 +2,7 @@
 
 This repository contains code and document of the mid-term project **Home Loan Approval Prediction** for the course ML Zoomcamp 2022 conducted by Alexey Grigorev.
 
-> * Project Link: https://home-loan-approval.herokuapp.com/
+> * Project Link: https://home-loan-approval-prediction.onrender.com
 > 
 > * Course Link: [mlbookcamp-code/course-zoomcamp at master · alexeygrigorev/mlbookcamp-code · GitHub](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp)
 
